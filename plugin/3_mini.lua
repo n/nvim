@@ -1,6 +1,10 @@
+if vim.g.vscode then
+  return
+end
+
 vim.pack.add({
-  { src = "https://github.com/nvim-mini/mini.tabline", version = "main" },
-  { src = "https://github.com/nvim-mini/mini.files", version = "main" },
+  "https://github.com/nvim-mini/mini.tabline",
+  "https://github.com/nvim-mini/mini.files",
 })
 
 require("mini.tabline").setup()
