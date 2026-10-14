@@ -1,22 +1,15 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Persistent undo
-local undodir = vim.fn.stdpath("state") .. "/undo"
-vim.fn.mkdir(undodir, "p") -- Create undo directory
-vim.opt.undodir = undodir -- Set undo directory
-vim.opt.undofile = true -- Enable persistent undo
-vim.opt.undolevels = 1000000 -- Maximum number of undo levels
+vim.o.undofile = true
+vim.o.number = true
+vim.o.signcolumn = "yes"
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.winborder = "rounded"
+vim.o.clipboard = "unnamedplus"
 
--- General
-vim.opt.number = true -- Show line numbers
-vim.opt.signcolumn = "yes" -- Show sign column
-vim.opt.tabstop = 2 -- Number of spaces for a tab
-vim.opt.shiftwidth = 2 -- Number of spaces for a shift
-vim.opt.expandtab = true -- Expand tabs to spaces
-vim.opt.winborder = "rounded" -- Rounded border type for floating windows
-
--- Diagnostics
 vim.diagnostic.config({
   virtual_text = {
     prefix = "●",
